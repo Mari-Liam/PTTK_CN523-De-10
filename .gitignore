@@ -1,0 +1,23 @@
+# Maven build output
+target/
+
+# Embedded Tomcat runtime temp directory
+tomcat.*/
+
+# Compiled Java / packaging artifacts
+*.class
+*.war
+*.ear
+*.log
+
+# IDE / Editor metadata
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# OS generated files
+.DS_Store
+Thumbs.db
