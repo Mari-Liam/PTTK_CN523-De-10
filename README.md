@@ -6,7 +6,7 @@
 
 ```text
 Code/
-├── pom.xml                                   # Cấu hình Maven (Tomcat 9, Servlet 4.0, MySQL Connector, JUnit 5)
+├── pom.xml                                   # Cấu hình Maven (Tomcat 9, Servlet 4.0, MySQL Connector, JUnit 4)
 ├── docker-compose.yml                        # Cấu hình Docker chạy MySQL 8.0 & phpMyAdmin
 ├── start-db.bat                              # Khởi chạy MySQL qua Docker
 ├── run-web.bat                               # Biên dịch và khởi chạy Web Server (Tomcat 9 nhúng)
@@ -38,7 +38,12 @@ Code/
 
 ---
 
-### 2. Hướng dẫn chạy & kiểm thử
+### 2. Yêu cầu môi trường
+* **JDK 17+**
+* **Apache Maven**
+* **Docker Desktop** (hoặc cài trực tiếp **MySQL Server 8.0** và import `sql/init.sql` vào DB `qlst_db`, tài khoản `root` / `root`)
+
+### 3. Hướng dẫn chạy & kiểm thử
 
 #### Bước 1: Khởi tạo CSDL MySQL qua Docker
 Chạy file `start-db.bat` hoặc gõ lệnh:
