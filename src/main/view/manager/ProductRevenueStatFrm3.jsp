@@ -12,9 +12,9 @@
                         ProductRevenueStat3[] listProductStat=(ProductRevenueStat3[])
                         request.getAttribute("listProductStat"); if (listProductStat==null &&
                         request.getAttribute("outMessage")==null) { listProductStat=(ProductRevenueStat3[])
-                        session.getAttribute("listProductStat"); } Float outTotalRevenue=(Float)
+                        session.getAttribute("listProductStat"); } Number outTotalRevenue=(Number)
                         request.getAttribute("outTotalRevenue"); if (outTotalRevenue==null &&
-                        request.getAttribute("outMessage")==null) { outTotalRevenue=(Float)
+                        request.getAttribute("outMessage")==null) { outTotalRevenue=(Number)
                         session.getAttribute("outTotalRevenue"); } DecimalFormatSymbols symbols=new
                         DecimalFormatSymbols(); symbols.setGroupingSeparator('.'); DecimalFormat df=new
                         DecimalFormat("#,###", symbols); %>
@@ -301,7 +301,7 @@
                                                     <td colspan="5" class="right"><i>Tổng:</i></td>
                                                     <td id="outTotalRevenue" class="right" style="color:#084298;">
                                                         <%= outTotalRevenue !=null ?
-                                                            df.format(Math.round(outTotalRevenue)) : "0" %>
+                                                            df.format(Math.round(outTotalRevenue.doubleValue())) : "0" %>
                                                     </td>
                                                 </tr>
                                             </tfoot>

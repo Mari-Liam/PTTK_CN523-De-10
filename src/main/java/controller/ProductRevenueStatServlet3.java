@@ -81,9 +81,9 @@ public class ProductRevenueStatServlet3 extends HttpServlet {
 
         ProductRevenueStat3[] listProductStat = productRevenueStatDAO.getProductRevenueStat(startDate, endDate);
 
-        float outTotalRevenue = 0f;
+        double outTotalRevenue = 0.0;
         for (ProductRevenueStat3 stat : listProductStat) {
-            outTotalRevenue += stat.getTotalRevenue();
+            outTotalRevenue += Math.round(stat.getTotalRevenue());
         }
 
         // Lưu kết quả vào session
